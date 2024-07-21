@@ -1,0 +1,13 @@
+main {
+    background: url(/assets/imagens/background-completo.png);
+    background-size: cover;
+    min-height: 60vh;
+  }
+.active{
+    border-bottom: 5px solid white;
+    color: white;
+    transition: 300ms ease-in;
+}
+.logo.active {
+    padding-bottom: 13px;
+}
