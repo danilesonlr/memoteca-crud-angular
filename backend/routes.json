@@ -1,0 +1,6 @@
+{
+  "/pagamentos/:id": "/pensamentos/:id",
+  "/service/pagamento/v1": "/pensamentos",
+  "/teste/service/api/v1/:id": "/teste/:id",
+  "/teste/service/api/v1": "/teste"
+}
