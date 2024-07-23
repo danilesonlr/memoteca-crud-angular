@@ -12,17 +12,24 @@ export class PensamentoService {
 
   constructor(private http: HttpClient) { }
 
-  listar(pagina: number): Observable<Pensamento[]>{
+  listar(pagina: number, filtro: string): Observable<Pensamento[]>{
     const itensPorPagina = 6;
 
     let params = new HttpParams()
     .set("_page", pagina)
     .set("_limit", itensPorPagina);
 
+
+    if(filtro.trim().length > 2){
+      params = params.set("q", filtro)
+    }
+
     //não e uma boa pratica concatenar string assim, o ideia e usar a classe HttpParams
     //return this.http.get<Pensamento[]>(`${this.API}?_page=${pagina}&_limit=${itensPorPagina}`)
 
     return this.http.get<Pensamento[]>(this.API, {params: params})
+    // caso o nome do parametro seja igual ao nome params pode contrair essa informação exemplo:
+    // return this.http.get<Pensamento[]>(this.API, {params}) //funciona das duas formas
   }
 
   criar(pensamento: Pensamento): Observable<Pensamento>{
