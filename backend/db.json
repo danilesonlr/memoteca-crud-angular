@@ -32,14 +32,14 @@
       "conteudo": "fdafdsafsa",
       "autoria": "fdafsdafdsa",
       "modelo": "modelo1",
-      "favorito": false,
+      "favorito": true,
       "id": 5
     },
     {
       "conteudo": "fdsfdafasf",
       "autoria": "fdsafasfsa",
       "modelo": "modelo1",
-      "favorito": false,
+      "favorito": true,
       "id": 6
     },
     {
@@ -53,7 +53,7 @@
       "conteudo": "dfsfsd",
       "autoria": "fdsfdsfsd",
       "modelo": "modelo1",
-      "favorito": false,
+      "favorito": true,
       "id": 8
     }
   ],

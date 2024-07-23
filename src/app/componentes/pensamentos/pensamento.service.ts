@@ -12,7 +12,7 @@ export class PensamentoService {
 
   constructor(private http: HttpClient) { }
 
-  listar(pagina: number, filtro: string): Observable<Pensamento[]>{
+  listar(pagina: number, filtro: string, favorito: boolean): Observable<Pensamento[]>{
     const itensPorPagina = 6;
 
     let params = new HttpParams()
@@ -22,6 +22,9 @@ export class PensamentoService {
 
     if(filtro.trim().length > 2){
       params = params.set("q", filtro)
+    }
+    if(favorito){
+      params = params.set("favorito", true)
     }
 
     //não e uma boa pratica concatenar string assim, o ideia e usar a classe HttpParams
