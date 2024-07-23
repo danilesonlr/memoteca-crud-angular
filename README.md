@@ -1,3 +1,5 @@
+# Documentação do angular: https://angular.dev/api
+
 # Memoteca
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
@@ -75,23 +77,26 @@ ou
 ng g c componentes/rodape
 
 
-# Instalando json serve, essa ferramenta e utilizada para simular o backend
-npm i json-server@0.17.4
+# Para rodar o backend dessa aplicação esta sendo utilizando o json serve
+  # Documentação do json server: https://github.com/typicode/json-server
+
+  # Instalando json serve, essa ferramenta e utilizada para simular o backend
+  npm i json-server@0.17.4
 
 
-    # para criar o arquivo json deve ser criado dentro da pasta nesse projeto foi criada a pasta backend
-    npm init -y
-    # deve ser alterado variavel test
-      "test": "echo \"Error: no test specified\" && exit 1"
-    #para
-        #deve ser criado um novo arquivo .json passando o json que deseja ser enviado pelo json-server  
-    "start": "json-server --watch db.json --port 3000" 
-    
-    #para executar deve ser utilizado o comando 
-    npm start
+      # para criar o arquivo json deve ser criado dentro da pasta nesse projeto foi criada a pasta backend
+      npm init -y
+      # deve ser alterado variavel test
+        "test": "echo \"Error: no test specified\" && exit 1"
+      #para
+          #deve ser criado um novo arquivo .json passando o json que deseja ser enviado pelo json-server  
+      "start": "json-server --watch db.json --port 3000" 
+      
+      #para executar deve ser utilizado o comando 
+      npm start
 
-    #para verificar e só acessar
-    http://localhost:3000/
+      #para verificar e só acessar
+      http://localhost:3000/
 
 
 # Criar serviço no angula por linha de comando
