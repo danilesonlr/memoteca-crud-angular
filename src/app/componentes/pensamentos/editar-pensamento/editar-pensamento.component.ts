@@ -21,12 +21,6 @@ export class EditarPensamentoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.formulario = this.formBuilder.group({
-      conteudo: [''],
-      autoria: [''],
-      modelo: [''],
-      id: ['']
-    });
     const id = this.route.snapshot.paramMap.get('id')
     this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) =>{
       this.formulario = this.formBuilder.group({
@@ -39,7 +33,8 @@ export class EditarPensamentoComponent implements OnInit {
           Validators.minLength(3)
         ])],
         modelo: [pensamento.modelo],
-        id: pensamento.id
+        id: pensamento.id,
+        favorito: [pensamento.favorito]
       })
     })
   }
